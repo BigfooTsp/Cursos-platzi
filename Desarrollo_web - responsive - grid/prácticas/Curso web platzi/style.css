@@ -1,0 +1,507 @@
+/* TAREAS
+    [ ] Eliminar línea bajo header
+    [ ] ampliar separación botón del artículo
+    [ ] Eliminar misterioso margen derecho a 320px
+    [ ] Crece el padding demasiado
+    [ ] revisar ajuste de imagenes en caminos
+    cambiar el tamañi de hero-text-container a em para evitar
+    los saltos.
+  */
+
+
+/********************************** 
+        Iconos como fuente
+**********************************/
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?45wxu6');
+    src:  url('fonts/icomoon.eot?45wxu6#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?45wxu6') format('truetype'),
+      url('fonts/icomoon.woff?45wxu6') format('woff'),
+      url('fonts/icomoon.svg?45wxu6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+  .icon-mail:before {
+    content: "\ea86";
+  }
+  .icon-facebook:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+/********************************** 
+**********************************/
+
+body {
+    margin: 0 auto;
+}
+
+p, h2{
+    font-family: 'Roboto', sans-serif;
+}
+º
+.container { /* Contenedor de secciones */
+    border: 1px solid transparent;
+    margin: 0 auto;
+    padding: inherit 1em;
+    max-width: 1000px;
+    min-width: 319px;
+    height: inherit;
+    display: inherit;
+    flex: 1;
+    flex-direction: inherit;
+    flex-wrap: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+  }
+
+/********************************** 
+               Header 
+**********************************/
+.header {
+    font-family: 'Acme', sans-serif;
+    background-color: #1A1D22;
+    color: #FFFDFF;
+    min-height: 78px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.header-title-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header-logo-container {
+    margin: 4px 4px;
+}
+.header-title {
+    font-size: 2.3em;
+    margin: 4px auto;
+    text-align: center;
+}
+
+.menu-list-container {
+    margin: 0;
+    padding: .3em;
+    font-size: 1.4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.menu-list-container li {
+    margin: .5em 2em;
+    
+}
+.menu-link {
+    color: #FFFDFF;
+    text-decoration: none;
+}
+
+/********************************** 
+            Menu icon 
+**********************************/
+.icon-menu {
+    display: none;
+    background-color: rgba(15, 15, 15, .2);
+    font-size: 40px;
+    color: gray;
+    margin: 4px;
+    padding: 11px;
+    border-radius: 30px;
+    position: fixed;
+    z-index: 4;
+}
+
+/********************************** 
+Hero 
+**********************************/
+.hero {
+    background-color: #1A1D22;
+    height: 22vw;
+    height: 230px;
+    padding: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+.hero-container {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-text-container {
+    font-family: 'Sarabun', sans-serif;
+    width: 44%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    /* top: 16%; */
+
+}
+.hero-text {
+    color: #FFFDFF;
+    width: 100%;
+    margin: 0;
+}
+.hero-text strong {
+    color: #026FFF;
+}
+
+.hero-image-container {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+.hero-image-container img {
+    width: 185%;
+    position: relative;
+    bottom: 260px;
+    right: 320px;
+    object-fit: cover;
+}
+
+/********************************** 
+             Mis Caminos 
+**********************************/
+
+.title-section-container {
+    color: #026FFF;
+    width: 100%;
+    font-family: 'Sarabun', sans-serif;
+    
+}
+.title-section {
+    font-size: 1.3em;
+    margin: .4em 3em;
+}
+
+.misCaminos-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* con esto arreglo parcialmente el probema */
+}
+.camino-container {
+    background-color: #F4FBFF;
+    max-width: 480px;
+    height: 380px;
+    margin: .6em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.camino-text-container {
+    background-color: rgba(255, 255, 255, 0.781);
+    width: 74%;
+    min-height: 45%;
+    padding: 1.3em;
+    text-align: center;
+    position: absolute;
+    bottom: 2em;
+    z-index: 2;
+}
+.camino-text-title {
+    font-size:1.3em;
+    text-align: center;
+    margin: 0;
+}
+.camino-text-variant {
+    color: rgb(68, 67, 67);
+    font-size:0.8em;
+    margin: 1px 1px 9px;
+    font-weight: bold; 
+}
+.camino-text-date {
+    color: rgb(68, 67, 67);
+    margin-top: 1px;
+    font-weight: bold; 
+    font-size: 0.9em;
+    text-align: center;
+}
+.camino-text-detail {
+    font-size:0.9em;
+    margin-top: 1px;
+    text-align: left;
+}
+.camino-url { /* boton "ver viaje" */
+    color: #056fff;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #056fff;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-transform: lowercase;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    left: 38%;
+
+}
+
+.camino-image-container {
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    bottom: 155px;
+    left: 0;
+    overflow: hidden;
+}
+.camino-image-container > img {
+    min-height: 100%;
+    position: relative;
+    left: 0;
+    top: 40px;
+    object-fit: contain;
+ }
+
+/********************************** 
+             Mapa 
+**********************************/
+.mapa-section {
+    background-color: hsl(240, 55%, 50%);
+    width: 65%;
+    max-width: 640px;
+    height: 48%;
+    max-height: 480;
+    padding-top: 48%; /* Relación de aspecto del iframe */
+    margin: 0 auto;
+    position: relative;
+}
+.mapa-iframe {
+    width: 100%;
+    max-height: 480px;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+ /********************************** 
+              Contacto 
+**********************************/
+.contacto {
+    background-color: #056FFF;
+    margin: 0 auto;
+    color: white;
+    height: 150px;
+}
+
+.email-container {
+    max-width: 260px;
+    padding: 10px;
+    display: block;
+}
+.email-question {
+    margin-top: 0;
+}
+.contacto input {
+    border: 1px solid #BFBFBF;
+    max-width: 200px;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+}
+.email-button {
+    font-family: 'Roboto', 'sans-serif';
+    color: white;
+    background: transparent;
+    margin: 15px 0;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-transform: lowercase;
+}
+
+/********************************** 
+               Footer 
+**********************************/
+.footer {
+    background-color: #1B2127;
+    min-height: 3em;
+    font-size: .8em;
+    color: white;
+    display: block;
+    text-align: center;
+}
+.footer p {
+    margin-bottom: 0;
+}
+/******************************************************* 
+                      Media Queries 
+*******************************************************/
+
+/***********************************************/
+@media screen and (max-width: 1023px) {
+/***********************************************/
+/* rectificar márgenes y contenedores*/
+.container {
+    padding: 0 5px;
+}
+
+/* Activando menu amburguesa */
+.icon-menu {
+    display: inline;
+}
+.menu-list-container {
+    position: fixed;
+    background-color: rgba(58, 25, 25, 0.90);
+    z-index: 3;
+    /* left: 75px; */
+    left: -380px;
+    top: 4px;
+    font-size: 2.5em;
+    flex-direction: column;
+}
+.is-active {
+    left: 4px;
+}
+
+.header {
+    justify-content: center;
+}
+/* hero - Superposición de elementos 
+          Redim. fuentes*/
+.hero-container {
+    width: 95%;
+    height: 100%;
+    align-items: center;
+}
+
+.hero-text-container {
+    text-shadow: 1px 2px 2px #000;
+    width: 45%;
+    left: 2%;
+    top: 5%;
+    font-size: 0.9em;
+    position: absolute;
+    filter: opacity(80%) /* blur(1px); */
+}
+.hero-text {
+    padding: .8em;
+    background-color: rgba(37, 32, 32, 0.61);
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+
+}
+.hero-image-container img {
+    width: 150%;
+    /* height: 285%; */
+    bottom: 280px;
+    right: 240px;
+}
+
+/* caminos - centrar imágenes */
+.camino-container {
+    max-width: 47%
+}
+.camino-image-container img {
+    min-width: 130%;
+    min-height: 101%;
+    left: -30%;
+}
+}
+
+/***********************************************/
+@media screen and (max-width: 766px) {
+/***********************************************/
+.hero-text-container {
+    font-size: 0.8em;
+    width: 60%;
+    right: 0;
+}
+
+.hero-image-container img {
+    width: 160%;
+    bottom: 235px;
+    right: 250px;
+}
+
+.title-section {
+    font-size: 1.2em;
+    margin-left: 2em;
+}
+
+.camino-container {
+    max-width: 100%;
+}
+.camino-image-container img {
+    left: -70px;
+}
+}
+
+/***********************************************/
+@media screen and (max-width: 479px) {
+/***********************************************/
+.hero-text-container {
+    width: 80%
+}
+.hero-image-container img {
+    width: 190%;
+    bottom: 235px;
+    right: 250px;
+}
+.camino-image-container img {
+    left: -130px;
+}
+}
+
+/***********************************************/
+@media screen and (max-width: 319px) {
+/***********************************************/
+
+}
+
+
