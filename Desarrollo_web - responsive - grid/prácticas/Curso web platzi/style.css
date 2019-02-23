@@ -318,16 +318,22 @@ Hero
               Contacto 
 **********************************/
 .contacto {
+    width: 100%;
     background-color: #056FFF;
     margin: 0 auto;
     color: white;
-    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .email-container {
     max-width: 260px;
+    min-height: 115px;
     padding: 10px;
     display: block;
+    position: relative;
 }
 .email-question {
     margin-top: 0;
@@ -347,6 +353,17 @@ Hero
     border-radius: 5px;
     padding: 5px 20px;
     text-transform: lowercase;
+    position: absolute;
+    right: 1em;
+    bottom: 1px;
+}
+
+.contact-container {
+    font-size: 3em;
+    text-align: center;
+}
+.contact-container > i {
+    margin:0.2em;
 }
 
 /********************************** 
@@ -467,6 +484,11 @@ Hero
 .camino-image-container img {
     left: -70px;
 }
+.contacto {
+    justify-content: center;
+
+}
+
 }
 
 /***********************************************/
