@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- prueba 2 -->
 <html lang="es">
     <head>
         <title>Responsive CSS</title>
@@ -45,10 +44,7 @@
         </div>
     </section>
 
-    <div class="container title-section-container">
-        <h2 class="title-section">Mis caminos de Santiago</h2>
-    </div>
-    
+   
     <section id="misCaminos-container" class="misCaminos-container">
         <div class="container">
             <article class="camino-container">
@@ -70,7 +66,7 @@
 
             <article class="camino-container">
                 <div class="camino-text-container">
-                    <h2 class="camino-text-title">Oviedo - Finisterre</h2>
+                    <h2 class="camino-text-title">Lugo - Finisterre</h2>
                     <p class="camino-text-variant">Camino Francés</p>
                     <p class="camino-text-date">Septiembre de 2014 
                         <strong class="camino-text-duration">(15 días)</strong>
@@ -144,9 +140,11 @@
 
     <section id="mapa" class="mapa-section">
         <div class="container">
-            <iframe class="mapa-iframe" src="https://www.google.com/maps/d/u/0/embed?mid=1_lllf_PdgFupgDliPFBPE9FmXzE" 
-                    width="640" height="480">
-            </iframe>
+            <div class="mapa-container">
+                <iframe class="mapa-iframe" src="https://www.google.com/maps/d/u/0/embed?mid=1_lllf_PdgFupgDliPFBPE9FmXzE" 
+                        width="640" height="480">
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -154,9 +152,16 @@
         <div class="container">
             <form action="/suscripcion/" class="email-container">
                 <h3 class="email-question">¿Quieres decirme algo?</h3>
-                <input type="text" placeholder="Déjame tu email" id=email>
+                <i class="icon-mail"></i>
+                <input type="text" placeholder="Déjame tu email" id="email">
                 <button class="email-button">Enviar</button>
             </form>
+            <div class="contact-container">
+                <i class="icon-twitter"></i>
+                <i class="icon-instagram"></i>
+                <i class="icon-facebook"></i>
+                <i class="icon-github"></i>
+            </div>
         </div>
 
     </section>
