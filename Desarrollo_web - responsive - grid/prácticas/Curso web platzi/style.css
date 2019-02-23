@@ -296,25 +296,22 @@ Hero
              Mapa 
 **********************************/
 .mapa-section {
-    background-color: hsl(240, 55%, 50%);
-    width: 65%;
     max-width: 640px;
-    height: 48%;
-    max-height: 480;
-    padding-top: 48%; /* Relación de aspecto del iframe */
+    max-height: 480px;
     margin: 0 auto;
+}
+.mapa-container {
+    height: 0;
+    padding-bottom: 48%; /* Relación de aspecto del iframe */
     position: relative;
+    overflow: hidden;
 }
 .mapa-iframe {
     width: 100%;
-    max-height: 480px;
     height: 100%;
     position:absolute;
     top: 0;
     left:0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
 }
 
  /********************************** 
