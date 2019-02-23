@@ -108,6 +108,7 @@ p, h2{
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    transition: .3s;
 }
 .menu-list-container li {
     margin: .5em 2em;
