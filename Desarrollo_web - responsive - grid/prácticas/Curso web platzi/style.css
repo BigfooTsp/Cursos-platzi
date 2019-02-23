@@ -80,15 +80,12 @@ p, h2{
     color: #FFFDFF;
     min-height: 78px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 .header-title-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .header-logo-container {
     margin: 4px 4px;
@@ -101,19 +98,15 @@ p, h2{
 
 .menu-list-container {
     margin: 0;
+    width: 400px;
     padding: .3em;
     font-size: 1.4em;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     transition: .3s;
 }
-.menu-list-container li {
-    margin: .5em 2em;
-    
-}
+
 .menu-link {
     color: #FFFDFF;
     text-decoration: none;
@@ -145,12 +138,12 @@ Hero
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .hero-container {
-    max-width: 8000px;
-    width: 80%;
-    height: 90%;
+    max-width: 800px;
+    width: 90%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +153,7 @@ Hero
 
 .hero-text-container {
     font-family: 'Sarabun', sans-serif;
-    width: 44%;
+    width: 64%;
     margin: 0;
     padding: 0;
     position: relative;
@@ -178,7 +171,7 @@ Hero
 }
 
 .hero-image-container {
-    width: 50%;
+    width: 70%;
     height: 100%;
     margin: 0;
     z-index: 1;
@@ -196,20 +189,9 @@ Hero
 /********************************** 
              Mis Caminos 
 **********************************/
-
-.title-section-container {
-    color: #026FFF;
-    width: 100%;
-    font-family: 'Sarabun', sans-serif;
-    
-}
-.title-section {
-    font-size: 1.3em;
-    margin: .4em 3em;
-}
-
 .misCaminos-container {
     background-color: white;
+    margin-top: 3em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -296,10 +278,19 @@ Hero
 /********************************** 
              Mapa 
 **********************************/
+.title-section-container {
+    color: #026FFF;
+    width: 100%;
+}
+.title-section {
+    font-family: 'Acme', sans-serif;    
+    font-size: 1.8em;
+    margin: .4em 3em;
+}
 .mapa-section {
     max-width: 640px;
     max-height: 480px;
-    margin: 0 auto;
+    margin: 0 auto 1em;
 }
 .mapa-container {
     height: 0;
@@ -398,12 +389,13 @@ Hero
     display: inline;
 }
 .menu-list-container {
+    width: 250px;
     position: fixed;
     background-color: rgba(58, 25, 25, 0.90);
     z-index: 3;
     /* left: 75px; */
-    left: -380px;
-    top: 4px;
+    left: -480px;
+    top: 1.7em;
     font-size: 2.5em;
     flex-direction: column;
 }
@@ -424,7 +416,7 @@ Hero
 
 .hero-text-container {
     text-shadow: 1px 2px 2px #000;
-    width: 45%;
+    width: 65%;
     left: 2%;
     top: 5%;
     font-size: 0.9em;
@@ -464,7 +456,7 @@ Hero
 /***********************************************/
 .hero-text-container {
     font-size: 0.8em;
-    width: 60%;
+    width: 70%;
     right: 0;
 }
 
@@ -496,7 +488,8 @@ Hero
 @media screen and (max-width: 479px) {
 /***********************************************/
 .hero-text-container {
-    width: 80%
+    width: 80%;
+    font-size: 0.73em;
 }
 .hero-image-container img {
     width: 190%;
