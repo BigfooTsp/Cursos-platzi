@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+  }
+  .container {
+    display: grid;
+    grid-template: 300px 100px 100px / minmax(300px, 1fr) repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .item {
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid red;
+  }
+  .item:nth-of-type(4) { /* Elije el cuarto item para hacer un sub-grid*/
+    background: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 50px 50px 50px / 200px 200px 200px;
+  }
+  .item .item {
+    background: yellow;
+  }
