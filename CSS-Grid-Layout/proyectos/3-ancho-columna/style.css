@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+}
+.container {
+  display: grid;
+  grid-template: 100px 1fr 150px/ 200px 1fr;
+  grid-gap: 10px;
+  height: 100vh;
+  grid-template-areas: "header header"
+                        "left contenido"
+                        "footer footer";
+}
+.item {
+  background: lightblue;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.header {
+  background-color: rgb(156, 156, 201);
+  grid-area: header;
+}
+
+.left {
+  background-color: rgb(194, 201, 156);
+  grid-area: left;
+}
+
+.contenido {
+  background-color: rgb(228, 227, 227);
+  grid-area: contenido;
+}
+
+.footer {
+  background-color: rgb(168, 193, 199);
+  grid-area: footer;
+}
