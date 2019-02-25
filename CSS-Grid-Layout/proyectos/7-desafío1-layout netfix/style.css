@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+  }
+
+.container {
+  position: relative
+}
+ /***********************************
+                Header
+ ************************************/
+.header-section {
+ border: 1px solid red;
+}
+
+ /***********************************
+                Menu
+ ************************************/
+.menu-section {
+  border: 1px solid green;
+}
+
+
+ /***********************************
+          Movies section
+ ************************************/
+ .movies-section {
+  border: 1px solid blue;
+}
