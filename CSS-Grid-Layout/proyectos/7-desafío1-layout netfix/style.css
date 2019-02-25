@@ -117,12 +117,12 @@ p {
 }
 .logo img {
   object-fit: contain;
-  width: 30%;
+  width: 25%;
 }
 
 .buscador {
   grid-area: buscador;
-  width: 100%;
+  width: 90%;
   max-width: 450px;
   height: 2.2em;
   border: 1px solid rgb(192, 190, 190);
@@ -192,11 +192,15 @@ p {
           Media Queries
  ************************************/
 @media screen and (max-width: 980px) {
+
 .header-section {
   grid-template: 50px 30px / repeat(2, auto);
   grid-template-areas: "logo user"
                        "buscador buscador";
+font-size: .8em;
 }
 
-
+.buscador {
+  height: 1.5em;
+}
 }
