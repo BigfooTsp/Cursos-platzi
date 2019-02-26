@@ -85,7 +85,7 @@ p {
 
 .buscador {
   grid-area: buscador;
-  width: 90%;
+  min-width: 90%;
   max-width: 450px;
   height: 2.2em;
   border: 1px solid rgb(192, 190, 190);
@@ -110,7 +110,7 @@ p {
   background-color: #FD6162;
   color: white;
   padding: 30px 5px;
-  height: 82vh;
+  height: 78vh;
   display: grid;
   grid-template-rows: repeat(3, 90px) 1fr;
   grid-template-areas: "home"
