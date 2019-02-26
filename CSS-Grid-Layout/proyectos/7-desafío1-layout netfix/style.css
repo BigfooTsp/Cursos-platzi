@@ -158,7 +158,7 @@ p {
 }
 .movie-box-container {
   border: 1px solid blue;
-  width: 90vw;
+  width: 85vw;
   padding: 5px;
   display: grid;
   grid-gap: 40px;
@@ -167,8 +167,8 @@ p {
 }
 .movie-box {
   border: 1px solid green;
-  min-width: 280px;
-  min-height: 200px;
+  width: 280px;
+  height: 200px;
 }
 .movie-image {
   border: 1px solid yellow;
