@@ -110,7 +110,7 @@ p {
   background-color: #FD6162;
   color: white;
   padding: 30px 5px;
-  height: 78vh;
+  height: 77vh;
   display: grid;
   grid-template-rows: repeat(3, 90px) 1fr;
   grid-template-areas: "home"
@@ -145,26 +145,45 @@ p {
  ************************************/
  .movies-section {
   grid-area: movies;
-  height: 82vh;
+  height: 80vh; /* Sobrepaso para ocultar scrollbar inferior */
   box-shadow: inset 3px 18px 12px -16px rgba(102,68,102,0.54);
   padding: 18px 0 18px 18px;
   display: grid;
-  grid-gap: 18px;
+  grid-gap: 40px;
   overflow: scroll;
 }
+.movies-section::-webkit-scrollbar {
+  border-radius: 5px;
+  height: 0; /* Hace desaparecer scrollbar inferior */
+}
+.movies-section::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(253,97,98,.3)
+}
+
 .movies-list {
 }
 .movies-list-title {
 }
 .movie-box-container {
-  border: 1px solid blue;
-  width: 85vw;
+  /* border: 1px solid blue; */
+  width: 80vw; 
   padding: 5px;
   display: grid;
   grid-gap: 40px;
   grid-auto-flow: column;
   overflow: scroll;
 }
+.movie-box-container::-webkit-scrollbar {
+  border-radius: 5px;
+  width: 0; /* Hace desaparecer scrollbar derecho */
+}
+.movie-box-container::-webkit-scrollbar-thumb {
+  height: 100%;
+  border-radius: 5px;
+  background: rgba(253,97,98,.3)
+}
+
 .movie-box {
   border: 1px solid green;
   width: 280px;
