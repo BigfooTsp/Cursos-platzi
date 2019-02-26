@@ -24,50 +24,14 @@ font-style: normal;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-heart:before {
-  content: "\e900";
-}
 .icon-like:before {
-  content: "\e900";
-}
-.icon-love:before {
-  content: "\e900";
-}
-.icon-favorite:before {
   content: "\e900";
 }
 .icon-home:before {
   content: "\e901";
 }
-.icon-cog:before {
-  content: "\e902";
-}
-.icon-gear:before {
-  content: "\e902";
-}
-.icon-preferences:before {
-  content: "\e902";
-}
 .icon-settings:before {
   content: "\e902";
-}
-.icon-generate:before {
-  content: "\e902";
-}
-.icon-control:before {
-  content: "\e902";
-}
-.icon-options:before {
-  content: "\e902";
-}
-.icon-fire:before {
-  content: "\e903";
-}
-.icon-flame:before {
-  content: "\e903";
-}
-.icon-hot:before {
-  content: "\e903";
 }
 .icon-popular:before {
   content: "\e903";
@@ -84,7 +48,6 @@ p {
   display: grid;
   width: 100%;
   max-width: 1440px;
-  height: 100%;
   margin: 0 auto;
   grid-template-columns: 90px 1fr;
   grid-template-rows: auto 1fr;
@@ -122,7 +85,7 @@ p {
 
 .buscador {
   grid-area: buscador;
-  width: 90%;
+  min-width: 80%;
   max-width: 450px;
   height: 2.2em;
   border: 1px solid rgb(192, 190, 190);
@@ -145,30 +108,57 @@ p {
 .menu-section {
   grid-area: menu;
   background-color: #FD6162;
-  padding: 10px;
-  height: 100%;
-  display: flex;
+  color: white;
+  padding: 30px 5px;
+  height: 78vh;
+  display: grid;
+  grid-template-rows: repeat(3, 90px) 1fr;
+  grid-template-areas: "home"
+                       "trending"
+                       "like"
+                       "settings";
+  align-content: flex-end;
 }
-
-
+.menu-section span {
+  font-size: 2em;
+  margin: 0 auto;
+  text-align: center; /* centra los iconos con el texto */
+}
+.menu-section span p {
+  font-size: .5em;
+}
+.icon.home {
+  grid-area: home;
+}
+.icon-popular {
+  grid-area: trending;
+}
+.icon-like {
+  grid-area: like;
+}
+.icon-settings {
+  grid-area: settings;
+  align-self: flex-end
+}
  /***********************************
           Movies section
  ************************************/
  .movies-section {
   grid-area: movies;
+  height: 82vh;
   box-shadow: inset 3px 18px 12px -16px rgba(102,68,102,0.54);
   padding: 18px 0 18px 18px;
   display: grid;
   grid-gap: 18px;
-
+  overflow: scroll;
 }
 .movies-list {
-  overflow: hidden;
 }
 .movies-list-title {
 }
 .movie-box-container {
   border: 1px solid blue;
+  width: 90vw;
   padding: 5px;
   display: grid;
   grid-gap: 40px;
