@@ -1,4 +1,7 @@
-@font-face {
+ /***********************************
+        Inserción de iconos
+ ************************************/
+ @font-face {
 font-family: 'icomoon';
 src:  url('fonts/icomoon.eot?6hnplx');
 src:  url('fonts/icomoon.eot?6hnplx#iefix') format('embedded-opentype'),
@@ -41,7 +44,25 @@ body {
   font-family: "lato", arial;
 }
 
-p {
+ /***********************************
+        Inserción de contenido
+ ************************************/
+ .movies-list-title::after {
+  content: "Películas recomendadas";
+}
+.movie-image-container img::after {
+  content: url("images/pelicula.jpg");
+}
+.movie-title::after {
+  content: "Matrix";
+}
+.movie-description::after {
+  content: "Película dirigida por un director e interpretada por actores"
+}
+ /***********************************
+        Configuración general
+ ************************************/
+p, figure{
   margin: 0;
 }
 .container {
@@ -54,6 +75,7 @@ p {
   grid-template-areas: "header header"
                        "menu movies";
 }
+
  /***********************************
                 Header
  ************************************/
@@ -102,6 +124,7 @@ p {
 .user figure {
   margin: 0 5px;
 }
+
  /***********************************
                 Menu
  ************************************/
@@ -140,6 +163,7 @@ p {
   grid-area: settings;
   align-self: flex-end
 }
+
  /***********************************
           Movies section
  ************************************/
@@ -164,6 +188,8 @@ p {
 .movies-list {
 }
 .movies-list-title {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 .movie-box-container {
   /* border: 1px solid blue; */
@@ -185,17 +211,46 @@ p {
 }
 
 .movie-box {
-  border: 1px solid green;
-  width: 280px;
-  height: 200px;
+  width: 250px;
+  height: 195px;
+  position: relative;
+  color: white;
 }
-.movie-image {
-  border: 1px solid yellow;
+.movie-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-.movie-text {
-  border: 1px solid orange;
+.movie-image-container img {
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+}
+  
+.movie-title {
+  background: rgba(253,97,98,.8);
+  font-weight: bold;
+  padding: 5px;
+  height: 42%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
 }
 
+.movie-description {
+  height: 30%;
+  margin-top: 40px;
+  padding: 5px;
+  font-size: .8em;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
 
  /***********************************
           Media Queries
