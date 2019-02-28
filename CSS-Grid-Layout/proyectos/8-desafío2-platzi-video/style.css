@@ -1,3 +1,55 @@
 body {
     font-family: Arial;
   }
+p {
+  margin: 0;
+}
+
+.container {
+  border: 1px solid rebeccapurple;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-areas: "title video video"
+                       "miPlaylists infoVideo infoVideo"
+                       "friendsPlaylists comments recomended";
+}
+
+.title-section {
+  grid-area: title;
+  border: 1px solid red;
+}
+
+.video-section {
+  grid-area: video;
+  border: 1px solid red;
+}
+
+
+.miPlaylists-section {
+  grid-area: miPlaylists;
+  border: 1px solid red;
+}
+
+.friendsPlaylists-section {
+  grid-area: friendsPlaylists;
+  border: 1px solid red;
+}
+
+
+.infoVideo-section {
+  grid-area: infoVideo;
+  border: 1px solid red;
+}
+
+.comments-section {
+  grid-area: comments;
+  border: 1px solid red;
+}
+
+.recomended-section {
+  grid-area: recomended;
+  border: 1px solid red;
+}
