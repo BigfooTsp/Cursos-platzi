@@ -171,7 +171,7 @@ figure {
   grid-area: options;
   display: grid;
   padding: 10px 0;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 1fr 1fr;
   grid-auto-columns: auto;
   grid-auto-flow: column;
 }
@@ -204,7 +204,9 @@ figure {
 }
 .video-tags p {
   background: rgb(131, 130, 211);
-  border-radius: 10px;
+  border-radius: 15px;
+  font-size: .8em;
+  width: 5em;
   margin: 7px;
   padding: 3px 10px;
   color: white;
@@ -245,4 +247,24 @@ figure {
 
 /*#####################################
                 RESPONSIVE
-######################################/
+######################################*/
+@media screen and (max-width: 950px) {
+  .left-bar {
+
+  }
+
+  .infoVideo-section {
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "video-title options"
+                        ". .";
+  }
+  .video-tags {
+    display:none;
+  }
+}
+
+@media screen and (max-height: 628px) {
+  .friendsPlaylists-section {
+    display: none;
+  }
+}
