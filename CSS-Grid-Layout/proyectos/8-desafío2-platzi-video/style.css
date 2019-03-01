@@ -1,55 +1,160 @@
 body {
-    font-family: Arial;
+    font-family: "Lato", Arial;
   }
-p {
+
+p,
+h4,
+h2,
+figure { 
   margin: 0;
 }
 
 .container {
-  border: 1px solid rebeccapurple;
   max-width: 1024px;
+  height: 100vh;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1.2fr 2fr 2fr;
   grid-template-rows: 2fr 1fr 2fr;
   grid-template-areas: "title video video"
-                       "miPlaylists infoVideo infoVideo"
-                       "friendsPlaylists comments recomended";
+                       "miPlaylist infoVideo infoVideo"
+                       "friends comments recomended";
 }
 
+/**************************************
+             Title-section
+***************************************/
 .title-section {
   grid-area: title;
-  border: 1px solid red;
+  background: #151B31;
+  color: white;
+  height: 2em;
+  padding: 25px 10px 0 10px;
+}
+.title-section strong {
+  color: #E32933;
 }
 
+/**************************************
+          miPlaylists-section
+***************************************/
+.miPlaylists-section {
+  grid-area: miPlaylist;
+  border: 1px solid red;
+}
+.miPlaylists-title {
+
+}
+.miPlaylist-list {
+
+}
+.miPlayList-song$ {
+
+}
+
+/**************************************
+        friendsPlaylists-section
+***************************************/
+.friendsPlaylists-section {
+  grid-area: friends;
+  border: 1px solid red;
+}
+/* .friendsPlaylists-title
+.friendsPlaylists-friend
+.friend-image
+.friend-name */
+
+/**************************************
+        friendsPlaylists-section
+***************************************/
 .video-section {
   grid-area: video;
   border: 1px solid red;
 }
+.video-section iframe {
 
-
-.miPlaylists-section {
-  grid-area: miPlaylists;
-  border: 1px solid red;
 }
 
-.friendsPlaylists-section {
-  grid-area: friendsPlaylists;
-  border: 1px solid red;
-}
-
-
+/**************************************
+           infoVideo-section
+***************************************/
 .infoVideo-section {
   grid-area: infoVideo;
-  border: 1px solid red;
+  border-bottom: 2px solid rgb(194, 187, 187);
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "video-title video-title"
+                       "options tags";
+}
+.video-title-box {
+  grid-area: video-title;
+}
+.video-options {
+  grid-area: options;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+.button-toMiPlaylist {
+
+}
+.link-compartir {
+
+}
+.link-compartir p {
+
+}
+.link-guardar {
+
+}
+.link-guardar p{
+
+}
+.video-tags {
+  grid-area: tags;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+.infoVideo-tag$ {
+
 }
 
+/**************************************
+            comments-section
+***************************************/
 .comments-section {
   grid-area: comments;
   border: 1px solid red;
 }
+.comments-section h4 {
+  
+}
+.comments-section input {
 
+}
+/* .comment-wall
+.comment-box
+.comment-user-image
+.comment-user-name */
+.comment {}
+
+/**************************************
+           recomended-section
+***************************************/
 .recomended-section {
   grid-area: recomended;
   border: 1px solid red;
 }
+/* .recomended-list-box
+.recomended-box
+.recomeded-image */
+.recomeded-text {}
+
+
+/*#####################################
+                RESPONSIVE
+######################################/

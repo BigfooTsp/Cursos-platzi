@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Platzi-Vídeo</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="title-section">.title-section</div>
-    <div class="miPlaylists-section">
-      <div class="miPlaylists-title">Mi playlist</div>
+    <h2 class="title-section">Platzi<strong>Video</strong></h2>
+    <section class="miPlaylists-section">
+      <h4 class="miPlaylists-title">Mi playlist</h4>
       <ol class="miPlaylist-list">
         <li class="miPlayList-song1"></li>
         <li class="miPlayList-song2"></li>
@@ -23,40 +24,48 @@
         <li class="miPlayList-song9"></li>
         <li class="miPlayList-song10"></li>
       </ol>
-    </div>
-    <div class="friendsPlaylists-section">
-      <div class="friendsPlaylists-title">Friends Playlists</div>
-      <div class="friendsPlaylists-friend">
-        <figure class="friendsPlaylists-image"></figure>
-        <p class="friendsPlaylists-name"></p>
-        <figure class="friendsPlaylists-image"></figure>
-        <p class="friendsPlaylists-name"></p>
-        <figure class="friendsPlaylists-image"></figure>
-        <p class="friendsPlaylists-name"></p>
-        <figure class="friendsPlaylists-image"></figure>
-        <p class="friendsPlaylists-name"></p>
-      </div>
-    </div>
-    <div class="video-section">
+    </section>
+    <section class="friendsPlaylists-section">
+      <h4 class="friendsPlaylists-title">Friends Playlists</h4>
+      <figure class="friendsPlaylists-friend">
+        <img src="" alt="" class="friend-image">
+        <p class="friend-name"></p>
+      </figure>
+      <figure class="friendsPlaylists-friend">
+        <img src="" alt="" class="friend-image">
+        <p class="friend-name"></p>
+      </figure>
+      <figure class="friendsPlaylists-friend">
+        <img src="" alt="" class="friend-image">
+        <p class="friend-name"></p>
+      </figure>
+      <figure class="friendsPlaylists-friend">
+        <img src="" alt="" class="friend-image">
+        <p class="friend-name"></p>
+      </figure>
+    </section>
+    <section class="video-section">
       <iframe src="" frameborder="0"></iframe>
-    </div>
-    <div class="infoVideo-section">.infoVideo-section
-      <p class="video-title">.video-title</p>
-      <p class="video-views">.video-views</p>
-      <div class="video-options">.video-options
+    </section>
+    <section class="infoVideo-section">
+      <div class="video-title-box">
+        <h4 class="video-title">Autor - Título del vídeo</h4>
+        <p class="video-views">153,422 vistas</p>
+      </div>
+      <div class="video-options">
         <button class="button-toMiPlaylist" type="submit">Agregar a mi lista</button>
         <span class="link-compartir"><p>Compartir</p></span>
         <span class="link-guardar"><p>Guardar</p></span>
       </div>
       <div class="video-tags">
-        <p class="infoVideo-tag1"></p>
-        <p class="infoVideo-tag2"></p>
-        <p class="infoVideo-tag3"></p>
-        <p class="infoVideo-tag4"></p>
+        <p class="infoVideo-tag1">tag1</p>
+        <p class="infoVideo-tag2">tag2</p>
+        <p class="infoVideo-tag3">tag3</p>
+        <p class="infoVideo-tag4">tag4</p>
       </div>
-    </div>
-    <div class="comments-section">
-      <p>Comentarios</p>
+    </section>
+    <section class="comments-section">
+      <h4>Comentarios</h4>
       <input type="text">
       <div class="comment-wall">
         <div class="comment-box">
@@ -85,9 +94,9 @@
           <p class="comment"></p>
         </div>
       </div>
-    </div>
-    <div class="recomended-section">
-      <p>Sugerencias</p>
+    </section>
+    <section class="recomended-section">
+      <h4>Sugerencias</h4>
       <div class="recomended-list-box">
         <div class="recomended-box">
           <figure class="recomended-image"></figure>
@@ -106,7 +115,7 @@
           <p class="recomended-text"></p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </body>
 </html>
