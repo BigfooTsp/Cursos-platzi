@@ -15,10 +15,23 @@ figure {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 2fr 2fr;
-  grid-template-rows: 2fr 1fr 2fr;
-  grid-template-areas: "title video video"
-                       "miPlaylist infoVideo infoVideo"
-                       "friends comments recomended";
+  grid-template-rows: 2.1fr .8fr 2.1fr;
+  grid-template-areas: "left video video"
+                       "left infoVideo infoVideo"
+                       "left comments recomended";
+}
+.left-bar {
+  grid-area: left;
+  display:grid;
+  background: #151B31;
+  color: white;
+  height: 100%;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  align-content: flex-start;
+  grid-template-areas: "title"
+                       "miPlaylist"
+                       "friends";
 }
 
 /**************************************
@@ -26,10 +39,8 @@ figure {
 ***************************************/
 .title-section {
   grid-area: title;
-  background: #151B31;
-  color: white;
-  height: 2em;
   padding: 25px 10px 0 10px;
+  height: 2em;
 }
 .title-section strong {
   color: #E32933;
@@ -40,24 +51,23 @@ figure {
 ***************************************/
 .miPlaylists-section {
   grid-area: miPlaylist;
-  border: 1px solid red;
+  height: 140%;
+  padding: 5px;
+  }
+.miPlaylists-section ol {
+  list-style-type: decimal;
+  padding-left:18px;
 }
-.miPlaylists-title {
-
+.miPlaylists-section li{
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: .8em;
 }
-.miPlaylist-list {
-
-}
-.miPlayList-song$ {
-
-}
-
 /**************************************
         friendsPlaylists-section
 ***************************************/
 .friendsPlaylists-section {
   grid-area: friends;
-  border: 1px solid red;
 }
 /* .friendsPlaylists-title
 .friendsPlaylists-friend
