@@ -34,8 +34,9 @@
 
 
 body {
-    font-family: "Lato", Arial;
-  }
+  font-family: "Lato", Arial;
+  margin: 0;
+}
 
 p,
 h4,
@@ -46,15 +47,17 @@ figure {
 
 .container {
   max-width: 1400px;
-  height: 96vh;
+  height: 100vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 250px 6fr 4fr;
   grid-template-rows: 1.2fr 130px .9fr;
-  grid-template-areas: "left video video"
-                       "left infoVideo infoVideo"
-                       "left comments recomended";
-}
+  grid-template-areas: 
+    "left video video"
+    "left infoVideo infoVideo"
+    "left comments recomended";
+  justify-content: center;
+  }
 .left-bar {
   grid-area: left;
   padding: 10px;
@@ -128,17 +131,16 @@ figure {
 .friend-name {
   padding-left: 10px;
 }
-/* 
-.friendsPlaylists-title
-.friend-image
-.friend-name 
-*/
 
 /**************************************
         video-section
 ***************************************/
 .video-section {
   grid-area: video;
+  width: 100%; /* Si  no se especifica ancho, el elemento no tiene tamaño y no se centra */
+  max-width: 800px;
+  justify-self: center;
+  align-self: center;
 }
 .video-container {
   height: 0;
@@ -297,32 +299,37 @@ figure {
   background: #151B31;
 }
 
-.recomended-box {
-
-}
-.recomeded-image {
-
-}
-.recomeded-text {
-
-}
-
-
 /*#####################################
                 RESPONSIVE
 ######################################*/
 @media screen and (max-width: 950px) {
-  .left-bar {
-
+  .container {
+    grid-template-columns: 3fr 3fr 4fr;
+    grid-template-areas: 
+    "video video video"
+    "infoVideo infoVideo infoVideo"
+    "comments comments recomended";
   }
-
-  .infoVideo-section {
-    grid-template-columns: 45% 55%;
-    grid-template-areas: "video-title options"
-                        ". .";
+  .left-bar {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-areas: 
+      "video video video"
+      "infoVideo infoVideo infoVideo"
+      "comments comments comments";
   }
   .video-tags {
     display:none;
+  }
+  .recomended-section {
+    display:none;
+  }
+  .infoVideo-section {
+    grid-template-columns: 1fr;
+
   }
 }
 
