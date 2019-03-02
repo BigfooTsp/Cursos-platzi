@@ -45,12 +45,12 @@ figure {
 }
 
 .container {
-  max-width: 1024px;
-  height: 100vh;
+  max-width: 1400px;
+  height: 96vh;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 2fr 2fr;
-  grid-template-rows: 2.1fr .8fr 2.1fr;
+  grid-template-columns: 250px 6fr 4fr;
+  grid-template-rows: 1.2fr 130px .9fr;
   grid-template-areas: "left video video"
                        "left infoVideo infoVideo"
                        "left comments recomended";
@@ -61,6 +61,7 @@ figure {
   display:grid;
   background: #151B31;
   color: white;
+  max-width: 3000px;
   height: 100%;
   grid-auto-flow: row;
   grid-auto-rows: min-content;
@@ -153,6 +154,7 @@ figure {
   padding: 20px 10px 15px 15px;
   display: grid;
   grid-auto-rows: min-content;
+  align-items: center;
   justify-content: space-between;
   grid-template-columns: 45% 55%;
   grid-template-areas: "video-title video-title"
@@ -204,6 +206,7 @@ figure {
 }
 .video-tags p {
   background: rgb(131, 130, 211);
+  text-align: center;
   border-radius: 15px;
   font-size: .8em;
   width: 5em;
@@ -218,31 +221,82 @@ figure {
 ***************************************/
 .comments-section {
   grid-area: comments;
-  border: 1px solid red;
+  display: grid;
+  grid-auto-rows: min-content;
+  padding: 15px;
+  grid-gap: 10px;
+  overflow: scroll;
 }
-.comments-section h4 {
-  
+.comments-section::-webkit-scrollbar {
+  height: 0; /* Hace desaparecer scrollbar inferior */
+  width: 6px;
 }
-.comments-section input {
+.comments-section::-webkit-scrollbar-thumb {
+  background: #151B31;
+  border-radius: 2px;
+}
 
+.comments-section input {
+  background: #F2F2F2;
+  /* background: url('images/friend3.jpg');
+  background-repeat: no-repeat; */
+  max-width: 500px;
+  height: 40px;
+  border: 0;
+  padding: 0 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(232,227,232,1);
 }
-/* .comment-wall
-.comment-box
-.comment-user-image
-.comment-user-name */
-.comment {}
+.comments-section input > img {
+  width: 20px;
+}
+.comment-box {
+  display:grid;
+  grid-template-areas: "image name"
+                       "image comment";
+  grid-auto-columns: max-content;
+  padding: 5px;
+}
+.comment-user-image {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+  grid-area: image;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.comment-user-image img {
+  object-fit: cover;
+}
 
 /**************************************
            recomended-section
 ***************************************/
 .recomended-section {
   grid-area: recomended;
-  border: 1px solid red;
+  overflow: scroll;
+  display: grid;
+  padding: 15px;
+  grid-row-gap: 30px;
 }
-/* .recomended-list-box
-.recomended-box
-.recomeded-image */
-.recomeded-text {}
+.recomended-section::-webkit-scrollbar {
+  height: 0; /* Hace desaparecer scrollbar inferior */
+  width: 6px;
+}
+.recomended-section::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #151B31;
+}
+
+.recomended-box {
+
+}
+.recomeded-image {
+
+}
+.recomeded-text {
+
+}
 
 
 /*#####################################
