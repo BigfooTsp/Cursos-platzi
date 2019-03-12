@@ -42,25 +42,10 @@ font-style: normal;
 
 body {
   font-family: "lato", arial;
+  background: rgb(41, 44, 58);
+  color: rgb(248, 239, 248)
 }
 
-
-
- /***********************************
-        Inserción de contenido
- ************************************/
- .movies-list-title::after {
-  content: "Películas recomendadas";
-}
-.movie-image-container img::after {
-  content: url("images/pelicula.jpg");
-}
-.movie-title::after {
-  content: "Matrix";
-}
-.movie-description::after {
-  content: "Película dirigida por un director e interpretada por actores"
-}
  /***********************************
         Configuración general
  ************************************/
@@ -128,7 +113,6 @@ p, figure{
   margin: 0 5px;
 }
 
-
 /**************************************
              Left-bar
 ***************************************/
@@ -149,16 +133,12 @@ p, figure{
   overflow: scroll;
 }
 .left-bar::-webkit-scrollbar {
-  border-radius: 5px;
-  width: 10px;
   height: 0; /* Hace desaparecer scrollbar inferior */
 }
 .left-bar::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: gray;
+  border-radius: 2px;
+  background: #c9c9dd
 }
-
-
 
 /**************************************
              Title-section
@@ -222,6 +202,7 @@ p, figure{
           Movies section
  ************************************/
  .movies-section {
+  background: rgb(41, 44, 58);
   grid-area: movies;
   height: 80vh; /* Sobrepaso para ocultar scrollbar inferior */
   box-shadow: inset 3px 18px 12px -16px rgba(102,68,102,0.54);
@@ -231,70 +212,72 @@ p, figure{
   grid-auto-columns: 100%;
   overflow: scroll;
 }
+.movies-section h1 {
+  font-size: 2em;
+}
 .movies-section::-webkit-scrollbar {
-  border-radius: 5px;
   height: 0; /* Hace desaparecer scrollbar inferior */
 }
 .movies-section::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background: rgba(253,97,98,.3)
+  border-radius: 2px;
+  background: #c9c9dd
 }
 
-.movies-list-title {
-  font-weight: bold;
-  font-size: 1.5em;
+.loading-gif {
+  position: relative
 }
+.loading-gif img{
+  width: 25%;
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+
 .movie-box-container {
   padding: 5px;
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 90px;
   grid-auto-flow: column; /* responsiveo el tamaño de la lista */
   overflow: scroll;
 }
 .movie-box-container::-webkit-scrollbar {
-  border-radius: 5px;
   width: 0; /* Hace desaparecer scrollbar derecho */
 }
 .movie-box-container::-webkit-scrollbar-thumb {
-  height: 100%;
-  border-radius: 5px;
-  background: rgba(253,97,98,.3)
+  border-radius: 2px;
+  background: #c9c9dd
 }
 
 .movie-box {
-  width: 250px;
-  height: 195px;
   position: relative;
-  color: white;
+  width: fit-content;
 }
 .movie-image-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
+  width: 200px;
 }
 .movie-image-container img {
   width: 100%;
-  position: relative;
-  left: 0;
-  bottom: 0;
   object-fit: contain;
 }
-  
+.fadeIn {
+  animation: 1000ms fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 .movie-title {
-  background: rgba(253,97,98,.8);
   font-weight: bold;
-  padding: 5px;
-  height: 42%;
-  width: 100%;
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
+  padding-top: 5px;
 }
 
 .movie-description {
-  height: 30%;
+  height: 10%;
   margin-top: 40px;
   padding: 5px;
   font-size: .8em;
@@ -302,6 +285,14 @@ p, figure{
   z-index: 2;
   bottom: 0;
 }
+ /***********************************
+                 Modal
+ ************************************/
+.modal {
+  display: none;
+}
+
+
 
  /***********************************
           Media Queries

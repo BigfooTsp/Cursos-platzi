@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Platzi Netflix</title>
-  <link href="https://fonts.googleapis.com/css?family=Coiny|Lato:400,400i,700" rel="stylesheet">  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Platzi Netflix</title>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Lato:400,400i,700" rel="stylesheet">  <link rel="stylesheet" href="style.css">
+  </head>
 <body>
   <!--
     .container>
-      fig.logo+input.buscador+.user>fig.user-image+p.user-name+
-      span.icon*4+
-      .movies-list#movies-list$*5>p.movies-list-title+.movie-box-container>.movie-box#movie-box$*6>fig.movie-image-container+p.movie-text
-   -->
+    fig.logo+input.buscador+.user>fig.user-image+p.user-name+
+    span.icon*4+
+    .movies-list#movies-list$*5>p.movies-list-title+.movie-box-container>.movie-box#movie-box$*6>fig.movie-image-container+p.movie-text
+  -->
   <div class="container">
-    <div class="header-section">
+    
+    <section class="header-section">
       <!-- fig.logo+input.buscador+.user>fig.user-image+p.user-name -->
       <figure class="logo">
         <img src="images/logo.png" alt="" width="90">
         <p>Platzix vídeo</p>
       </figure>
-      <input type="text" class="buscador" placeholder="  Busca película o serie">
+      <input type="text" class="buscador" placeholder="  Busca película">
       <div class="user">
         <p class="user-name">Pedro Pastor</p>
         <figure class="user-image">
@@ -27,221 +29,67 @@
         </figure>
         <p>▼</p>
       </div>
-    </div>
-
-    <!-- <div class="menu-section">
-      <!-- span.icon*4
-      <span class="icon icon-home">
-        <p>Home</p>
-      </span>
-      <span class="icon icon-popular">
-        <p>Trending</p>
-      </span>
-      <span class="icon icon-like">
-        <p>Like</p>
-      </span>
-      <span class="icon icon-settings">
-        <p>Ajustes</p>
-      </span>
-    </div>
-  -->
-
-  <div class="left-bar">
-    <h2 class="title-section">Platzi<strong>Video</strong></h2>
-    <section class="miPlaylists-section">
-      <h4 class="miPlaylists-title">Mi playlist</h4>
-      <ol class="miPlaylist-list">
-        <li class="miPlayList-videoTitle1">American Beauty</li>
-        <li class="miPlayList-videoTitle2">Rocky</li>
-        <li class="miPlayList-videoTitle3">Rocky II</li>
-        <li class="miPlayList-videoTitle4">Acorralado</li>
-        <li class="miPlayList-videoTitle5">La Jungla de Cristal</li>
-        <li class="miPlayList-videoTitle6">Un Día de Furia</li>
-        <li class="miPlayList-videoTitle7">Solo en Casa</li>
-        <li class="miPlayList-videoTitle8">El Señor de los Anillos</li>
-        <li class="miPlayList-videoTitle9">A la Caza del Ocubre Rojo</li>
-        <li class="miPlayList-videoTitle10">Es lo que hay</li>
-      </ol>
     </section>
-    <section class="friendsPlaylists-section">
-      <h4 class="friendsPlaylists-title">Friends Playlists</h4>
-      <div class="friend-container">
-        <figure class="friend-image-container">
-          <img src="images/friend1.jpg" width="50" alt="" class="friend-image">
-        </figure>
-        <p class="friend-name">Vivan Robertson</p>
-      </div>
-      <div class="friend-container">
-        <figure class="friend-image-container">
-          <img src="images/friend2.jpg" width="50" alt="" class="friend-image">
-        </figure>
-        <p class="friend-name">Carlos Brown</p>
-      </div>
-      <div class="friend-container">
-        <figure class="friend-image-container">
-          <img src="images/friend3.jpg" width="50" alt="" class="friend-image">
-        </figure>
-        <p class="friend-name">Sheila Hanson</p>
-      </div>
-      <div class="friend-container">
-        <figure class="friend-image-container">
-          <img src="images/friend4.jpg" width="50" alt="" class="friend-image">
-        </figure>
-        <p class="friend-name">Ethan Snyder</p>
-      </div>
-    </section>
-</div>
     
-    <div class="movies-section">
-      <!-- .movies-list#movies-list$*5>p.movies-list-title+.movie-box-container>.movie-box#movie-box$*6>fig.movie-image-container+p.movie-text -->
-      <div class="movies-list" id="movies-list1">
-        <p class="movies-list-title"></p>
-        <div class="movie-box-container">
-          <div class="movie-box" id="movie-box1">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box2">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box3">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box4">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box5">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box6">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
+    <section class="left-bar">
+      <h2 class="title-section">Platzi<strong>Video</strong></h2>
+      <section class="miPlaylists-section">
+        <h4 class="miPlaylists-title">Mi playlist</h4>
+        <ol class="miPlaylist-list">
+          <li class="miPlayList-videoTitle1">American Beauty</li>
+          <li class="miPlayList-videoTitle2">Rocky</li>
+          <li class="miPlayList-videoTitle3">Rocky II</li>
+          <li class="miPlayList-videoTitle4">Acorralado</li>
+          <li class="miPlayList-videoTitle5">La Jungla de Cristal</li>
+          <li class="miPlayList-videoTitle6">Un Día de Furia</li>
+          <li class="miPlayList-videoTitle7">Solo en Casa</li>
+          <li class="miPlayList-videoTitle8">El Señor de los Anillos</li>
+          <li class="miPlayList-videoTitle9">A la Caza del Ocubre Rojo</li>
+          <li class="miPlayList-videoTitle10">Es lo que hay</li>
+        </ol>
+      </section>
+      <section class="friendsPlaylists-section">
+        <h4 class="friendsPlaylists-title">Friends Playlists</h4>
+        <div class="friend-container">
+          <figure class="friend-image-container">
+            <img src="images/friend1.jpg" width="50" alt="" class="friend-image">
+          </figure>
+          <p class="friend-name">Vivan Robertson</p>
         </div>
-      </div>
-      <div class="movies-list" id="movies-list2">
-        <p class="movies-list-title"></p>
-        <div class="movie-box-container">
-          <div class="movie-box" id="movie-box1">
-            <figure class="movie-image-container">
-              <img src="images/pelicula.jpg" alt="">
-            </figure>
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box2">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box3">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box4">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box5">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box6">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
+        <div class="friend-container">
+          <figure class="friend-image-container">
+            <img src="images/friend2.jpg" width="50" alt="" class="friend-image">
+          </figure>
+          <p class="friend-name">Carlos Brown</p>
         </div>
-      </div>
-      <div class="movies-list" id="movies-list3">
-        <p class="movies-list-title"></p>
-        <div class="movie-box-container">
-          <div class="movie-box" id="movie-box1">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box2">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box3">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box4">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box5">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box6">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
+        <div class="friend-container">
+          <figure class="friend-image-container">
+            <img src="images/friend3.jpg" width="50" alt="" class="friend-image">
+          </figure>
+          <p class="friend-name">Sheila Hanson</p>
         </div>
-      </div>
-      <div class="movies-list" id="movies-list4">
-        <p class="movies-list-title"></p>
-        <div class="movie-box-container">
-          <div class="movie-box" id="movie-box1">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box2">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box3">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box4">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box5">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box6">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
+        <div class="friend-container">
+          <figure class="friend-image-container">
+            <img src="images/friend4.jpg" width="50" alt="" class="friend-image">
+          </figure>
+          <p class="friend-name">Ethan Snyder</p>
         </div>
-      </div>
-      <div class="movies-list" id="movies-list5">
-        <p class="movies-list-title"></p>
-        <div class="movie-box-container">
-          <div class="movie-box" id="movie-box1">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box2">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box3">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box4">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box5">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-          <div class="movie-box" id="movie-box6">
-             <figure class="movie-image-container"><img src="" alt="">
-            <p class="movie-title"></p><p class="movie-description"></p>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </section>
+    
+    <section  class="movies-section">
+      <figure class="loading-gif">
+        <img  src="images/loader.gif" alt="">
+      </figure>
+    </section>
+    
+    <!-- section.modal>(figure>img)+p+button.exit -->
+    <section class="modal">
+      <figure><img src="" alt=""></figure>
+      <p></p>
+      <button class="exit"></button>
+    </section>
+    
   </div>
 </body>
 </html>
