@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+/*         fetch_básico: {
+            fetch("https://yts.am/api/v2/list_movies.json?limit=1&query_term='titanic'")
+            .then((response)=>{return response.json()})
+            .then((miJson)=>console.info(miJson.data.movies))
+        }
+ */
+        fetch_async_function: {
+            async function seePromise(search) {
+                let pr = await fetch(`https://yts.am/api/v2/list_movies.json?limit=1&query_term=${search}`)
+                const data = await pr.json()
+                return data
+            }
+            const search = "titanic"
+            seePromise(search)
+            .then((miJson)=>{console.log(miJson.data.movie_count, miJson)})
+            
+            
+
+        }
+
+    
+    
+    </script>
+    
+</body>
+</html>

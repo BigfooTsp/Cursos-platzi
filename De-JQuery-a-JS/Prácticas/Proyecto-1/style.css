@@ -42,8 +42,8 @@ font-style: normal;
 
 body {
   font-family: "lato", arial;
-  background: rgb(41, 44, 58);
-  color: rgb(248, 239, 248)
+  background: #151B31;
+  color: rgb(248, 239, 248);
 }
 
  /***********************************
@@ -68,6 +68,7 @@ p, figure{
                 Header
  ************************************/
 .header-section {
+  background: #151B31;
   grid-area: header;
   font-family: "coiny", arial;
   padding: 5px;
@@ -80,17 +81,13 @@ p, figure{
 }
 
 .logo {
-  grid-area: logo;
-  font-size: 1.5em;
-  height: 100%;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+
+  padding-top: 20px;
+  height: 2em;
+  font-size: 1.9em;
 }
-.logo img {
-  object-fit: contain;
-  width: 25%;
+.logo strong {
+  color: #E32933;
 }
 
 .buscador {
@@ -127,8 +124,7 @@ p, figure{
   grid-auto-flow: row;
   grid-auto-rows: min-content;
   align-content: space-between;
-  grid-template-areas: "title"
-                       "miPlaylist"
+  grid-template-areas: "miPlaylist"
                        "friends";
   overflow: scroll;
 }
@@ -138,19 +134,6 @@ p, figure{
 .left-bar::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: #c9c9dd
-}
-
-/**************************************
-             Title-section
-***************************************/
-.title-section {
-  grid-area: title;
-  padding-top: 20px;
-  height: 2em;
-  font-size: 1.9em;
-}
-.title-section strong {
-  color: #E32933;
 }
 
 /**************************************
@@ -288,10 +271,71 @@ p, figure{
  /***********************************
                  Modal
  ************************************/
-.modal {
+.no-modal {
   display: none;
 }
+.modal {
+  display: grid;
+  background: rgb(166, 80, 173);
+  border-radius: 15px;
+  box-shadow: 10px 10px 14px 0px rgba(0,0,0,1);
+  width: 50%;
+  max-width: 625px;
+  min-width: 400px;
+  height: 50%;
+  min-height: 500px;
+  padding: 20px;
+  /* Centrado del elemento */
+  position: absolute;
+  margin: auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  /* ..................... */
+  grid-auto-columns: 44% 56%;
+  grid-auto-rows: 10% 80% 10%; 
+  grid-template: 'title image'
+                 'description image'
+                 'button image';
+  grid-gap: 10px;
+  justify-items: center;
+}
+.modal h2 {
+  grid-area: title;
+  height: min-content;
+}
+.modal figure {
+  grid-area: image;
+  width: 100%;
+}
+.modal figure img {
+  width: 100%;
+  max-height: 100%;
+}
+.modal p {
+  grid-area: description;
+  overflow: scroll;
+}
+.modal p::-webkit-scrollbar {
+  height: 0; /* Hace desaparecer scrollbar inferior */
+  width: 9px;
+}
+.modal p::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #151B31
+}
 
+.modal button {
+  grid-area: 'button';
+  background: red;
+  color: white;
+  border: 3px solid gray;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  justify-self: center;
+}
 
 
  /***********************************

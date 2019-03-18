@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Platzi Netflix</title>
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Coiny|Lato:400,400i,700" rel="stylesheet">  <link rel="stylesheet" href="style.css">
   </head>
 <body>
@@ -17,11 +16,10 @@
     
     <section class="header-section">
       <!-- fig.logo+input.buscador+.user>fig.user-image+p.user-name -->
-      <figure class="logo">
-        <img src="images/logo.png" alt="" width="90">
-        <p>Platzix vídeo</p>
-      </figure>
-      <input type="text" class="buscador" placeholder="  Busca película">
+      <h2 class="logo">Platzi<strong>Video</strong></h2>
+      <form action="" id="buscadorForm" class="buscadorForm">
+        <input type="search" name="name" class="buscador" form="buscadorForm" placeholder="  Busca película (Título en inglés)" required>
+      </form>
       <div class="user">
         <p class="user-name">Pedro Pastor</p>
         <figure class="user-image">
@@ -32,7 +30,6 @@
     </section>
     
     <section class="left-bar">
-      <h2 class="title-section">Platzi<strong>Video</strong></h2>
       <section class="miPlaylists-section">
         <h4 class="miPlaylists-title">Mi playlist</h4>
         <ol class="miPlaylist-list">
@@ -84,12 +81,10 @@
     </section>
     
     <!-- section.modal>(figure>img)+p+button.exit -->
-    <section class="modal">
-      <figure><img src="" alt=""></figure>
-      <p></p>
-      <button class="exit"></button>
+    <section id="modal" class="no-modal">
     </section>
     
   </div>
 </body>
+<script src="script.js"></script>
 </html>
