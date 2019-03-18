@@ -21,7 +21,9 @@
         <img src="images/logo.png" alt="" width="90">
         <p>Platzix vídeo</p>
       </figure>
-      <input type="text" class="buscador" placeholder="  Busca película">
+      <form class="buscadorForm">
+        <input type="text" name="name" form="buscador" class="buscador" requiered="true" placeholder="  Busca película (Título en inglés)">
+      </form>
       <div class="user">
         <p class="user-name">Pedro Pastor</p>
         <figure class="user-image">
@@ -84,10 +86,7 @@
     </section>
     
     <!-- section.modal>(figure>img)+p+button.exit -->
-    <section class="modal">
-      <figure><img src="" alt=""></figure>
-      <p></p>
-      <button class="exit"></button>
+    <section id="modal" class="no-modal">
     </section>
     
   </div>

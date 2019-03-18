@@ -42,8 +42,8 @@ font-style: normal;
 
 body {
   font-family: "lato", arial;
-  background: rgb(41, 44, 58);
-  color: rgb(248, 239, 248)
+  background: #151B31;
+  color: rgb(248, 239, 248);
 }
 
  /***********************************
@@ -68,6 +68,7 @@ p, figure{
                 Header
  ************************************/
 .header-section {
+  background: #151B31;
   grid-area: header;
   font-family: "coiny", arial;
   padding: 5px;
@@ -288,10 +289,39 @@ p, figure{
  /***********************************
                  Modal
  ************************************/
-.modal {
+.no-modal {
   display: none;
 }
-
+.modal {
+  display: grid;
+  background: rgb(166, 80, 173);
+  border-radius: 15px;
+  box-shadow: 10px 10px 14px 0px rgba(0,0,0,1);
+  width: 50%;
+  min-width: 400px;
+  height: 50%;
+  min-height: 500px;
+  padding: 20px;
+  /* Centrado del elemento */
+  position: absolute;
+  margin: auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  /* ..................... */
+  text-align: center;
+  justify-content: center;
+}
+.modal button {
+  background: red;
+  color: white;
+  border: 3px solid gray;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  justify-self: center;
+}
 
 
  /***********************************
