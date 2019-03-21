@@ -18,12 +18,12 @@
       <!-- fig.logo+input.buscador+.user>fig.user-image+p.user-name -->
       <h2 class="logo">Platzi<strong>Video</strong></h2>
       <form action="" id="buscadorForm" class="buscadorForm">
-        <input type="search" name="name" class="buscador" form="buscadorForm" placeholder="  Busca película (Título en inglés)" required>
+        <input type="search" value="" name="name" class="buscador" form="buscadorForm" placeholder="  Busca película (Título en inglés)" required>
       </form>
       <div class="user">
-        <p class="user-name">Pedro Pastor</p>
+        <p id="user-name" class="user-name"></p>
         <figure class="user-image">
-          <img src="images/user-image.png" width="50" alt="">
+          <img id="user-image"src="" width="50" alt="">
         </figure>
         <p>▼</p>
       </div>
@@ -45,32 +45,7 @@
           <li class="miPlayList-videoTitle10">Es lo que hay</li>
         </ol>
       </section>
-      <section class="friendsPlaylists-section">
-        <h4 class="friendsPlaylists-title">Friends Playlists</h4>
-        <div class="friend-container">
-          <figure class="friend-image-container">
-            <img src="images/friend1.jpg" width="50" alt="" class="friend-image">
-          </figure>
-          <p class="friend-name">Vivan Robertson</p>
-        </div>
-        <div class="friend-container">
-          <figure class="friend-image-container">
-            <img src="images/friend2.jpg" width="50" alt="" class="friend-image">
-          </figure>
-          <p class="friend-name">Carlos Brown</p>
-        </div>
-        <div class="friend-container">
-          <figure class="friend-image-container">
-            <img src="images/friend3.jpg" width="50" alt="" class="friend-image">
-          </figure>
-          <p class="friend-name">Sheila Hanson</p>
-        </div>
-        <div class="friend-container">
-          <figure class="friend-image-container">
-            <img src="images/friend4.jpg" width="50" alt="" class="friend-image">
-          </figure>
-          <p class="friend-name">Ethan Snyder</p>
-        </div>
+      <section id="friends-list" class="friendsPlaylists-section">
       </section>
     </section>
     

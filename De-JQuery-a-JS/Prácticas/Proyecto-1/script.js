@@ -1,7 +1,5 @@
 
-const USER_API = 'https://randomuser.me/api/'
 const $miPlaylist = document.getElementsByClassName('miPlaylist-list')
-const $friendsList= document.getElementsByClassName('friend-container')
 
 async function callAPI(params) {                        // STUB Gestiona llamada a API externa y guarda en localStorage
     try {
@@ -69,6 +67,52 @@ async function loadLists() {                            // SECTION Carga las lis
         })
     }
 }                                                       //!SECTION 
+
+async function loadFriends() {                          // SECTION Cargando amigos desde API 'random user'
+    async function callUserAPI(results=1) {  
+        const USER_API = `https://randomuser.me/api/?results=${results}`
+        let call = await fetch(USER_API)
+        const miJSON = await call.json()
+        return miJSON.results
+    }
+
+    function templateFriend(friend) {
+        return `<div class="friend-container">
+                <figure class="friend-image-container">
+                    <img src="${friend.picture.thumbnail}" width="50" alt="" class="friend-image">
+                </figure>
+                <p class="friend-name">${friend.name.first} ${friend.name.last}</p>
+                </div>`
+    }
+    function templateFriendContainer(friends) {          // NOTE  
+        let htmlstr = ''
+        friends.forEach(friend => {
+            friendTemplate = templateFriend(friend)
+            htmlstr += friendTemplate
+        });
+        return `<h4 class="friendsPlaylists-title">Friends Playlists</h4>
+                ${htmlstr}`
+    }
+
+    function pasteUser(user) {
+        const $userName = document.getElementById("user-name")
+        const $userImage = document.getElementById("user-image")
+        const image= user[0].picture.thumbnail
+        const nick = user[0].name.first
+        $userName.innerHTML = nick
+        $userImage.setAttribute('src', image)
+    }
+    Gestionando_FrienList: {
+        const $friendsList= document.getElementById("friends-list")
+        const friends = await callUserAPI(4)
+        const template = templateFriendContainer(friends)
+        $friendsList.innerHTML = template
+
+        const userRequest = await callUserAPI()
+        const user = await userRequest
+        pasteUser(user)
+    }
+}                                   
 
 async function manageSearch(event) {                    // SECTION Activa y gestiona búsqueda
     function modalTemplate(movie) {                     // NOTE Crea el template con la información de la película
@@ -141,6 +185,7 @@ async function manageSearch(event) {                    // SECTION Activa y gest
 Cargando_script: {                                      // NOTE Cargando Script
     async function load() {
         window.localStorage.clear()
+        await loadFriends()
         await loadLists()
 
         const $buscador = document.getElementById("buscadorForm")
