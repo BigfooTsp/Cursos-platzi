@@ -1,15 +1,14 @@
 
-const $miPlaylist = document.getElementsByClassName('miPlaylist-list')
 
 async function callAPI(params) {                        // STUB Gestiona llamada a API externa y guarda en localStorage
-    try {
+    try {                                               // STUB con Promesas ('https://yts.am/api/v2/list_movies.json?limit=10').then((r)=>{return r.json()}).then((r)=>{console.log(r)})
         const VIDEO_API = 'https://yts.am/api/v2/list_movies.json?'
         const resp= await fetch(`${VIDEO_API}${params}`)
         const miJson = await resp.json()
 
         if (miJson.data.movie_count) {
             const {data: {movies: data}} = miJson
-            data.forEach(movie => {
+            data.forEach(movie => {                     // STUB guarda en localStorage
                 const title = movie.title
                 window.localStorage.setItem(title, JSON.stringify(movie)) // NOTE solo guarda texto   
             }) 
@@ -30,9 +29,9 @@ async function loadLists() {                            // SECTION Carga las lis
                 </div>`
     }
     function MovieTemplate(movie, genre) {              // NOTE Devuelve el template HTML con el contenedor de la película.
-        return `<div class="movie-box" data-id=${movie.id} data-genre="${genre}" data-title="${movie.title}">
+        return `<div class="movie-box" data-id=${movie.id} data-genre="${genre}">
                     <figure class="movie-image-container">
-                        <img src="${movie.medium_cover_image}" alt="">
+                        <img data-title="${movie.title}" src="${movie.medium_cover_image}" alt="">
                     </figure>
                     <p class="movie-title">${movie.title}</p>
                 </div>`
@@ -56,10 +55,10 @@ async function loadLists() {                            // SECTION Carga las lis
         HTMLTemplate += await getTemplate('action')
         HTMLTemplate += await getTemplate('drama')
         
-        $moviesSection[0].innerHTML = HTMLTemplate          // STUB Pegando html
+        $moviesSection[0].innerHTML = HTMLTemplate       // STUB Pegando html
         const imageList = Array.from($moviesSection[0].querySelectorAll('img'))    // STUB Mostrando con animación fade-in
         imageList.forEach(image => {
-            image.addEventListener('load', event => {       // STUB Listener
+            image.addEventListener('load', event => {
                 event.srcElement.classList.add('fadeIn')
             })
             let container = image.parentElement.parentElement
@@ -84,7 +83,7 @@ async function loadFriends() {                          // SECTION Cargando amig
                 <p class="friend-name">${friend.name.first} ${friend.name.last}</p>
                 </div>`
     }
-    function templateFriendContainer(friends) {          // NOTE  
+    function templateFriendContainer(friends) {
         let htmlstr = ''
         friends.forEach(friend => {
             friendTemplate = templateFriend(friend)
@@ -112,9 +111,9 @@ async function loadFriends() {                          // SECTION Cargando amig
         const user = await userRequest
         pasteUser(user)
     }
-}                                   
+}                                                       // !SECTION 
 
-async function manageSearch(event) {                    // SECTION Activa y gestiona búsqueda
+async function manageSearch() {                         // SECTION Activa y gestiona búsqueda
     function modalTemplate(movie) {                     // NOTE Crea el template con la información de la película
         return `<h2 class="title">${movie.title}</h2>
                 <figure class = 'image'>
@@ -166,26 +165,59 @@ async function manageSearch(event) {                    // SECTION Activa y gest
         }
     }
 
-    event.preventDefault()
-    let searchString       
+    Gestionando_búsqueda: {
+        event.preventDefault()
+        let searchString
+        if (event.type === 'submit') {
+            const $buscador = event.target              // NOTE const searchMovie = this.value (Pero me decido por otra forma)
+            const data = new FormData($buscador)        // STUB FormData, Se podría hacer también con qweryselector.contentBox
+            searchString = data.get('name')
+        } else if (event.type === 'click') {
+            searchString = event.target.dataset.title
+        }
     
-    if (event.type === 'submit') {
-        const $buscador = event.target                   // NOTE const searchMovie = this.value (Pero me decido por otra forma)
-        const data = new FormData($buscador)             // STUB FormData, Se podría hacer también con qweryselector.contentBox
-        searchString = data.get('name')
-    } else if (event.type === 'click') {
-        searchString = event.target.parentElement.parentElement.dataset.title
+        let template = await searchMovie(searchString)
+        showModal(template)                             // NOTE Muestra el modal con el resultado
     }
-
-    let template = await searchMovie(searchString)
-    showModal(template)                                 // NOTE Muestra el modal con el resultado
 }                                                       //!SECTION 
 
 
+async function loadMyPlaylist (items) {                 // SECTION Crea la playlist funcional
+    function templateItem (movie) {
+        return `<li class='playlist-item' data-title="${movie.title}">${movie.title}</li>`
+    }
+    function templateList (movies) {
+        let HTMLstring = ''
+        movies.forEach(element => {
+            const template = templateItem(element)
+            HTMLstring += template
+        })
+        return HTMLstring
+    }
+    
+    Creando_lista: {
+        // const playlist = fetch('https://yts.am/api/v2/list_movies.json?limit=10').then((r)=>{return r.json()}).then((e)=>{return e})
+        const $miPlaylist = document.getElementById('mi-playlist')
+        const movies = await items                          // REVIEW intenté llamar a callApi desde aquí pero no me lo reconocía y arriba sí
+        const template = templateList(movies)
+        $miPlaylist.innerHTML = template    
+    }
+    Activando_enlaces: {
+        const $itemsCollection = document.getElementsByClassName('playlist-item') // STUB Activando enlaces de una lista en un template 
+        const $itemsContainer = $itemsCollection[0].parentElement
+        const $listItems = Array.from($itemsContainer.querySelectorAll('li'))
+
+        $listItems.forEach(element => {
+            element.addEventListener('click', manageSearch)
+        })
+    }
+}                                                       // !SECTION 
+    
 Cargando_script: {                                      // NOTE Cargando Script
     async function load() {
         window.localStorage.clear()
         await loadFriends()
+        await loadMyPlaylist(callAPI('limit=10'))
         await loadLists()
 
         const $buscador = document.getElementById("buscadorForm")
